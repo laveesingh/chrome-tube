@@ -1,0 +1,15 @@
+#root {
+  width: 400px;
+  height: 400px;
+}
+
+.player-button {
+  padding: 15px 30px;
+  background-color: #37a000;
+  border: none;
+  box-shadow: 5px 5px 10px lightgrey;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
