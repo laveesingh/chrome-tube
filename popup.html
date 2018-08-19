@@ -2,14 +2,24 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="popup.css" />
   <script src="popup.js"></script>
 </head>
 
 <body>
   <div id="root">
-    <button class="player-button next-button">Play Next</button>
-    <button class="player-button prev-button">Play Prev</button>
+    <div class="media-controls">
+      <button class="player-button prev-button">
+        <i class="fa fa-fast-backward"></i>
+      </button>
+      <button class="player-button play-button">
+        <i class="fa fa-pause"></i>
+      </button>
+      <button class="player-button next-button">
+        <i class="fa fa-fast-forward"></i>
+      </button>
+    </div>
   </div>
 </body>
 

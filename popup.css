@@ -3,13 +3,20 @@
   height: 400px;
 }
 
+.media-controls {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
 .player-button {
-  padding: 15px 30px;
-  background-color: #37a000;
+  padding: 15px 20px;
+  background-color: rgba(51, 103, 214, 1);
   border: none;
-  box-shadow: 5px 5px 10px lightgrey;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px darkgrey;
   cursor: pointer;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
 }

@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   const nextButton = document.querySelector('.next-button')
   const prevButton = document.querySelector('.prev-button')
+  const playButton = document.querySelector('.play-button')
 
   nextButton.onclick = () => sendMessageToAllTabs({ message: 'playNext' })
   prevButton.onclick = () => sendMessageToAllTabs({ message: 'playPrev' })
+  playButton.onclick = () => sendMessageToAllTabs({ message: 'togglePause' })
 })
 
 function sendMessageToCurrentTab({ message }) {
