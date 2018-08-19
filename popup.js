@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function sendMessageToCurrentTab({ message }) {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { message }, function(response) {
-      console.log(response)
+      // do something with response
     })
   })
 }
@@ -20,7 +20,7 @@ function sendMessageToAllTabs({ message }) {
   chrome.tabs.query({}, function(tabs) {
     tabs.forEach(function(tab) {
       chrome.tabs.sendMessage(tab.id, { message }, function(response) {
-        console.log(response)
+        // do something with response
       })
     })
   })

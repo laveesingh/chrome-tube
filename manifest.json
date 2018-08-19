@@ -22,6 +22,26 @@
       "128": "icons/youtube128.png"
     }
   },
+  "commands": {
+    "playNext": {
+      "suggested_key": {
+        "default": "MediaNextTrack"
+      },
+      "description": "Play the next song"
+    },
+    "playPrev": {
+      "suggested_key": {
+        "default": "MediaPrevTrack"
+      },
+      "description": "Play the prev song"
+    },
+    "togglePause": {
+      "suggested_key": {
+        "default": "MediaPlayPause"
+      },
+      "description": "Toggle play and pause"
+    }
+  },
   "icons": {
     "16": "icons/youtube16.png",
     "48": "icons/youtube48.png",

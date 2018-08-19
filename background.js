@@ -10,3 +10,17 @@ chrome.runtime.onInstalled.addListener(function() {
     ])
   })
 })
+
+chrome.commands.onCommand.addListener(function(command) {
+  sendMessageToAllTabs({ message: command })
+})
+
+function sendMessageToAllTabs({ message }) {
+  chrome.tabs.query({}, function(tabs) {
+    tabs.forEach(function(tab) {
+      chrome.tabs.sendMessage(tab.id, { message }, function(response) {
+        // do something with response
+      })
+    })
+  })
+}
