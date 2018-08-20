@@ -23,7 +23,11 @@ class YoutubePlayer {
   }
 
   playPrev() {
-    this.dispatchClickEvent(this._prevButton)
+    if (this._prevButton && this._prevButton.style.display !== 'none') {
+      this.dispatchClickEvent(this._prevButton)
+    } else {
+      window.history && window.history.back()
+    }
   }
 
   playNext() {
