@@ -1,9 +1,18 @@
 class YoutubePlayer {
   constructor() {
     this._document = document || window.document
-    this._nextButton = this._document.querySelector('.ytp-next-button')
-    this._prevButton = this._document.querySelector('.ytp-prev-button')
-    this._pauseButton = this._document.querySelector('.ytp-play-button')
+
+    if (document.readyState == 'complete') {
+      this._nextButton = this._document.querySelector('.ytp-next-button')
+      this._prevButton = this._document.querySelector('.ytp-prev-button')
+      this._pauseButton = this._document.querySelector('.ytp-play-button')
+    } else {
+      window.addEventListener('load', () => {
+        this._nextButton = this._document.querySelector('.ytp-next-button')
+        this._prevButton = this._document.querySelector('.ytp-prev-button')
+        this._pauseButton = this._document.querySelector('.ytp-play-button')
+      })
+    }
 
     // bind class methods
     this.playPrev = this.playPrev.bind(this)
