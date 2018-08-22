@@ -3,14 +3,10 @@ class YoutubePlayer {
     this._document = document || window.document
 
     if (document.readyState == 'complete') {
-      this._nextButton = this._document.querySelector('.ytp-next-button')
-      this._prevButton = this._document.querySelector('.ytp-prev-button')
-      this._pauseButton = this._document.querySelector('.ytp-play-button')
+      this.setButtons()
     } else {
       window.addEventListener('load', () => {
-        this._nextButton = this._document.querySelector('.ytp-next-button')
-        this._prevButton = this._document.querySelector('.ytp-prev-button')
-        this._pauseButton = this._document.querySelector('.ytp-play-button')
+        this.setButtons()
       })
     }
 
@@ -20,9 +16,20 @@ class YoutubePlayer {
     this.togglePause = this.togglePause.bind(this)
     this.dispatchClickEvent = this.dispatchClickEvent.bind(this)
     this.sendKeys = this.sendKeys.bind(this)
+    this.setButtons = this.setButtons.bind(this)
+  }
+
+  setButtons() {
+    this._nextButton = this._document.querySelector('.ytp-next-button')
+    this._prevButton = this._document.querySelector('.ytp-prev-button')
+    this._pauseButton = this._document.querySelector('.ytp-play-button')
   }
 
   playPrev() {
+    if (!this._nextButton) {
+      this.setButtons()
+    }
+
     if (this._prevButton && this._prevButton.style.display !== 'none') {
       this.dispatchClickEvent(this._prevButton)
     } else {
@@ -31,10 +38,16 @@ class YoutubePlayer {
   }
 
   playNext() {
+    if (!this._nextButton) {
+      this.setButtons()
+    }
     this.dispatchClickEvent(this._nextButton)
   }
 
   togglePause() {
+    if (!this._nextButton) {
+      this.setButtons()
+    }
     this.dispatchClickEvent(this._pauseButton)
   }
 
