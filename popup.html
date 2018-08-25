@@ -9,16 +9,38 @@
 
 <body>
   <div id="root">
+    <div class="extension-name">
+      <h2>ChromeTube</h2>
+      <p>(3.0)</p>
+    </div>
     <div class="media-controls">
-      <button class="player-button prev-button">
-        <i class="fa fa-fast-backward"></i>
-      </button>
-      <button class="player-button play-button">
-        <i class="fa fa-pause"></i>
-      </button>
-      <button class="player-button next-button">
-        <i class="fa fa-fast-forward"></i>
-      </button>
+      <div>
+        <p> MediaTrackPrev </p>
+        <button class="player-button prev-button">
+          <i class="fa fa-fast-backward"></i>
+        </button>
+        <p> Alt+Shift+J </p>
+      </div>
+      <div>
+        <p> MediaPlayPause </p>
+        <button class="player-button play-button">
+          <i class="fa fa-play"></i><i class="fa fa-pause"></i>
+        </button>
+        <p> Alt+Shift+K </p>
+      </div>
+      <div>
+        <p> MediaTrackNext </p>
+        <button class="player-button next-button">
+          <i class="fa fa-fast-forward"></i>
+        </button>
+        <p> Alt+Shift+L </p>
+      </div>
+    </div>
+    <div class="guide">
+      <h3>Enable shortcuts globally (inside our outside chrome)</h3>
+      <ol>
+        <li> Go to <strong>chrome://extensions/shortcuts</strong> </li>
+        <li>In ChromeTube section, change <strong>In Chrome</strong> to <strong>Global</strong></li>
     </div>
   </div>
 </body>
