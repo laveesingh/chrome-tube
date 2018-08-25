@@ -40,6 +40,24 @@
         "default": "MediaPlayPause"
       },
       "description": "Toggle play and pause"
+    },
+    "playNextDup": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Play the next song"
+    },
+    "playPrevDup": {
+      "suggested_key": {
+        "default": "Alt+Shift+J"
+      },
+      "description": "Play the prev song"
+    },
+    "togglePauseDup": {
+      "suggested_key": {
+        "default": "Alt+Shift+K"
+      },
+      "description": "Toggle play and pause"
     }
   },
   "icons": {
