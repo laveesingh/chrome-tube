@@ -1,7 +1,7 @@
 {
   "name": "Chrome Tube",
   "version": "3.0",
-  "description": "Control youtube player via media keys on your keyboard",
+  "description": "Control youtube player via keyboard from anywhere",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],
